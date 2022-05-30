@@ -4,8 +4,9 @@
   <% @friends.each do |friend| %>
     <%= render friend %>
     <p>
-      <%= link_to "Show this friend", friend %>
+      <%= link_to "Show this friend", friend, class: "btn btn-outline-primary btn-sm" %>
     </p>
+    <p><%= link_to 'Delete', friend, method: :delete, class: "btn btn-outline-danger btn-sm" %>
   <% end %>
 </div>
 
