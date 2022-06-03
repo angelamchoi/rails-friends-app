@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'friends#index'
   # root 'home#index' #homepage
   get 'home/about'
-
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
 
 end
